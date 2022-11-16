@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	let promiseObj=new Promise((resolve,reject)=>{
+		var time=Math.random();
+		console.log(time)
+		if(time<.5)
+			return resolve("Data is true from server")
+		else
+			return reject("Server crashed")
+	})
+	console.log(promiseObj)
+	console.log("hello")
+</script>
+</body>
+</html>
