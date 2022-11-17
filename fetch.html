@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	/*<script type="text/javascript">
+		/*fetch("http://reqres.in/api/users?page=2")
+		.then((res)=>{
+			console.log(res)
+			return res.json()
+			
+		})
+		.then((jsonresponse)=>{
+			console.log(jsonresponse)
+		})*/
+
+	</script>*/
+	<section>
+		<div id="emp">
+			
+		</div>
+	</section>
+	<script type="text/javascript">
+		function display(employees){
+			var block=document.getElementById("emp")
+			for(i=0;i<employees.length;i++){
+				block.innerHTML+=`<p>${employees[i].first_name}</p>`
+			}
+		}
+	</script>
+</body>
+</html>
