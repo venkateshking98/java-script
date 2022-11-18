@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		fetch("http://reqres.in.api/users",{
+			method:"POST"
+			headers:{
+				"Content-Type":"application/json"
+			},
+			body:JSON.stringify({name:"king",age:24,gender:"male"})
+		})
+		.then((res)=>{
+			console.log(res)
+			if(res.status==201){
+				alert("Data Added Successfully")
+			}
+			return.res.json()
+		})
+		.then((update)=>{
+			console.log(update
+				)
+		})
+	</script>
+</body>
+</html>

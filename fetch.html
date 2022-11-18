@@ -6,18 +6,41 @@
 	<title></title>
 </head>
 <body>
-	/*<script type="text/javascript">
-		/*fetch("http://reqres.in/api/users?page=2")
-		.then((res)=>{
-			console.log(res)
-			return res.json()
-			
-		})
-		.then((jsonresponse)=>{
-			console.log(jsonresponse)
-		})*/
+	<section id="emp" style="display:flex">
+		
+	</section>
+		<script type="text/javascript">
 
-	</script>*/
+		fetch("https://reqres.in/api/users?page=2")
+		.then((res)=>{
+			//console.log(res)
+			return res.json()
+		})
+		.then((jsonRes)=>{
+
+
+
+
+			
+			console.log(jsonRes.data)
+			display(jsonRes.data)
+		})
+		function display(employees){
+			var block=document.getElementById("emp")
+			//block.innerHTML=employees[0].first_name
+			for(var i=0;i<employees.length;i++){
+				block.innerHTML+=`
+				<div>
+				<p>${employees[i].first_name}</p>
+				<img src="${employees[i].avatar}"
+				width="50%"/>
+				</div>`
+				//console.log(employees[i].first_name)
+			}
+		}
+
+
+	</script>
 	<section>
 		<div id="emp">
 			
